@@ -11,7 +11,7 @@ namespace Lab2_OOP
 
     class Program
     {
-         static int Main(string[] args)
+         static void Main(string[] args)
         {
             //Определение переменных всех возможных примитивных типов
 
@@ -27,7 +27,7 @@ namespace Lab2_OOP
             /*целое число - 1 байт*/
             sbyte sby = -1;
             /*целое натуральное число - 2 байта*/
-            ushort us = 2;
+            ushort ush = 2;
             /*целое натуральное число число - 4 байта*/
             uint ui = 4;
             /*целое число - 8 байт*/
@@ -49,9 +49,95 @@ namespace Lab2_OOP
             //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
+            //Вывод всех определенных переменных
+
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            Console.WriteLine();
+            Console.WriteLine("                            <--------Вывод определенных заранее значений переменных-------->");
+            Console.WriteLine();
+            Console.WriteLine($"Логический тип данных bool: {b}");
+            Console.WriteLine($"Тип данных int: {i}");
+            Console.WriteLine($"Тип данных uint: {ui}");
+            Console.WriteLine($"Тип данных long: {l}");
+            Console.WriteLine($"Тип данных ulong: {ulo}");
+            Console.WriteLine($"Тип данных short: {s}");
+            Console.WriteLine($"Тип данных ushort: {ush}");
+            Console.WriteLine($"Тип данных byte: {by}");
+            Console.WriteLine($"Тип данных sbyte: {sby}");
+            Console.WriteLine($"Тип данных decimal: {dec}");
+            Console.WriteLine($"Тип данных double: {d}");
+            Console.WriteLine($"Тип данных float: {f}");
+            Console.WriteLine($"Тип данных char: {c}");
+            Console.WriteLine($"Тип данных object: {obj}");
+            Console.WriteLine($"Тип данных string: {str}");
+            Console.WriteLine();
+            Console.WriteLine();
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+            //Ввод значений переменных и вывод их на консоль
+
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            Console.WriteLine("Введите значения типа bool (true/false):");
+            b = Convert.ToBoolean(Console.ReadLine());
+            Console.WriteLine("Введите значение типа int:");
+            i = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение типа uint:");
+            ui = Convert.ToUInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение типа long:");
+            l = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Введите значение типа ulong:");
+            ulo = Convert.ToUInt64(Console.ReadLine());
+            Console.WriteLine("Введите значение типа short:");
+            s = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Введите значение типа ushort:");
+            ush = Convert.ToUInt16(Console.ReadLine());
+            Console.WriteLine("Введите значение типа byte:");
+            by = Convert.ToByte(Console.ReadLine());
+            Console.WriteLine("Введите значение типа sbyte:");
+            sby = Convert.ToSByte(Console.ReadLine());
+            Console.WriteLine("Введите значение типа decimal:");
+            dec = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("Введите значение типа double:");
+            d = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите значение типа float:");
+            f = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Введите значение типа char:");
+            c = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Введите значение типа object:");
+            //Подойдет любой метод класса Convert
+            obj = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine("Введите значение типа string:");
+            str = Convert.ToString(Console.ReadLine());
+            Console.WriteLine(); 
+            Console.WriteLine();
 
 
 
+            Console.WriteLine();
+            Console.WriteLine("                            <--------Вывод введенных с клавиатуры значений переменных-------->");
+            Console.WriteLine();
+            Console.WriteLine($"Логический тип данных bool: {b}");
+            Console.WriteLine($"Логический тип данных int: {i}");
+            Console.WriteLine($"Логический тип данных uint: {ui}");
+            Console.WriteLine($"Логический тип данных long: {l}");
+            Console.WriteLine($"Логический тип данных ulong: {ulo}");
+            Console.WriteLine($"Логический тип данных short: {s}");
+            Console.WriteLine($"Логический тип данных ushort: {ush}");
+            Console.WriteLine($"Логический тип данных byte: {by}");
+            Console.WriteLine($"Логический тип данных sbyte: {sby}");
+            Console.WriteLine($"Логический тип данных decimal: {dec}");
+            Console.WriteLine($"Логический тип данных double: {d}");
+            Console.WriteLine($"Логический тип данных float: {f}");
+            Console.WriteLine($"Логический тип данных char: {c}");
+            Console.WriteLine($"Тип данных object: {obj}");
+            Console.WriteLine($"Тип данных string: {str}");
+            Console.WriteLine();
+            Console.WriteLine();
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+            //
 
 
         }
