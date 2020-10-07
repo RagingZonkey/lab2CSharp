@@ -125,7 +125,6 @@ namespace Lab2_OOP
             Console.WriteLine($"Логический тип данных double: {d}");
             Console.WriteLine($"Логический тип данных float: {f}");
             Console.WriteLine($"Логический тип данных char: {c}");
-            Console.WriteLine($"Тип данных object: {obj}");
             Console.WriteLine($"Тип данных string: {str}");
             Console.WriteLine();
             Console.WriteLine();
@@ -183,9 +182,26 @@ namespace Lab2_OOP
             price = (int)obj;
             Console.WriteLine($"Распаковка: {price}");
             Console.WriteLine();
-            
+            Console.WriteLine();
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+
+            //Работа с неявно типизированной переменной и Nullable переменной + ошибка var
+
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            var z = 5;
+            Console.WriteLine();
+            Console.WriteLine($"Неявно типизированная переменная: {z}");
+            Console.WriteLine();
+            int? nullable = null;
+            Console.WriteLine($"Объект чилового типа данных со значением null (Nullable - переменная):   {nullable}");
+            Console.WriteLine();
+            Console.WriteLine();
+
+            var error = 10;
+            //error = 3.6f; 
         }
+
 
 
     }
