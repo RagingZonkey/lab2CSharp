@@ -44,8 +44,7 @@ namespace Lab2_OOP
             string str = "Доброе утро!";
             /*десятичное дробное число*/
             decimal dec = 3.4m;
-            /*значение любого типа данных - занимает 4 байта на 32-разрядной платформе и 8 байт на 64-разрядной платформе*/
-            object obj = 22.5;
+            
             //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
@@ -68,7 +67,6 @@ namespace Lab2_OOP
             Console.WriteLine($"Тип данных double: {d}");
             Console.WriteLine($"Тип данных float: {f}");
             Console.WriteLine($"Тип данных char: {c}");
-            Console.WriteLine($"Тип данных object: {obj}");
             Console.WriteLine($"Тип данных string: {str}");
             Console.WriteLine();
             Console.WriteLine();
@@ -104,9 +102,6 @@ namespace Lab2_OOP
             f = Convert.ToSingle(Console.ReadLine());
             Console.WriteLine("Введите значение типа char:");
             c = Convert.ToChar(Console.ReadLine());
-            Console.WriteLine("Введите значение типа object:");
-            //Подойдет любой метод класса Convert
-            obj = Convert.ToChar(Console.ReadLine());
             Console.WriteLine("Введите значение типа string:");
             str = Convert.ToString(Console.ReadLine());
             Console.WriteLine(); 
@@ -137,8 +132,58 @@ namespace Lab2_OOP
             //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-            //
+            //5 операций явного и неявного преобразования типов
 
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            l = i;
+            i = s;
+            ui = ush;
+            f = by;
+            d = s;
+
+            Console.WriteLine();
+            Console.WriteLine("                            <--------Неявное приведение-------->");
+            Console.WriteLine();
+            Console.WriteLine($"int к long: {l}");
+            Console.WriteLine($"short к int: {i}");
+            Console.WriteLine($"ushort к uint: {ui}");
+            Console.WriteLine($"byte к float: {f}");
+            Console.WriteLine($"sbyte к double: {d}");
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            ulo = (ulong)ui;
+            by = (byte)c;
+            d = (double)f;
+            dec = (decimal)ush;
+            l = (long)s;
+
+            Console.WriteLine();
+            Console.WriteLine("                            <--------Явное приведение-------->");
+            Console.WriteLine();
+            Console.WriteLine($"uint к ulong: {ulo}");
+            Console.WriteLine($"char к byte: {by}");
+            Console.WriteLine($"float к double: {d}");
+            Console.WriteLine($"ushort к decimal: {dec}");
+            Console.WriteLine($"sbyte к long: {l}");
+            Console.WriteLine();
+            Console.WriteLine();
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+            //Упаковка и распаковка значимых типов
+
+            //<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            int price = 39;
+            Console.WriteLine();
+            Object obj = price;
+            Console.WriteLine($"Упаковка: {obj}");
+            Console.WriteLine();
+            price = (int)obj;
+            Console.WriteLine($"Распаковка: {price}");
+            Console.WriteLine();
+            
 
         }
 
