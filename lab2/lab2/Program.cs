@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Lab2_OOP
 {
 
-    class Program
+    class fun4
     {
          static void Main(string[] args)
         {
@@ -203,7 +203,7 @@ namespace Lab2_OOP
             ////<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-            ////Сравнение строковых литералов
+            ////Строки
 
             ////<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -230,8 +230,13 @@ namespace Lab2_OOP
             //{
             //    Console.WriteLine("Строки str1 и str2 идентичны");
             //}
-            //string str_concat = String.Concat(str2, "!!!");
+            
             //string str3 = null;
+            //bool bIsEmpty = String.IsNullOrEmpty(str3);
+            //string name = "";
+            //bool bIsEmpty2 = String.IsNullOrEmpty(name);
+            //Console.WriteLine($"Строка str3 пустая/null: {bIsEmpty}");
+            //Console.WriteLine($"Строка name пустая/null: {bIsEmpty2}");
             //string str4, str5;
             //Console.WriteLine("Введите строку: ");
             //str3 = Console.ReadLine();
@@ -239,12 +244,12 @@ namespace Lab2_OOP
             //str4 = Console.ReadLine();
             //Console.WriteLine("Введите строку: ");
             //str5 = Console.ReadLine();
-            //Console.WriteLine($"Интерполяция: {str3}");
+            //Console.WriteLine($"Интерполяция: {str3,4}");
             //str4 = String.Copy(str3);
             //Console.WriteLine($"Копирование: {str4}");
             //int n = 0;
             //bool flag = true;
-            //Console.WriteLine("Индекс символ, начиная с которого вставляется строка: ");
+            //Console.WriteLine("Индекс символа, начиная с которого вставляется строка: ");
             //while (flag)
             //{
             //    n = Convert.ToInt32(Console.ReadLine());
@@ -280,6 +285,10 @@ namespace Lab2_OOP
             //Console.WriteLine($"Третья строка после вставки в нее подстроки: {str5}");
             //str5 = str5.Remove(n, str3.Length);
             //Console.WriteLine($"Третья строка после удаления из нее подстроки: {str5}");
+            //str3 = String.Concat(str3, " !!!!!!!");
+            //Console.WriteLine($"Конкатенация с помощью метода String.Concat(): {str3}");
+            
+
 
             ////<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -287,126 +296,179 @@ namespace Lab2_OOP
             ////Массивы
 
             ////<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
-            //Матрица
-            Console.WriteLine("Матрица:");
-            int[,] MatrixArr = new int[4, 4];
-            Random Elem = new Random();
-            for (int I = 0; I < 4; I++)
+            ////Матрица
+            //Console.WriteLine();
+            //Console.WriteLine("                            <--------Массивы-------->");
+            //Console.WriteLine();
+            //Console.WriteLine("Матрица:");
+            //int[,] MatrixArr = new int[4, 4];
+            //Random Elem = new Random();
+            //for (int I = 0; I < 4; I++)
+            //{
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        MatrixArr[I, j] = Elem.Next(1, 10);
+            //        Console.Write("{0}  ", MatrixArr[I, j]);
+            //    }
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine();
+
+            ////Массив строк 
+
+            //string[] greetings = new string[] { "How", "are", "you?" };
+
+            //foreach (string m in greetings)
+            //{
+            //    Console.Write(m + " ");
+            //}
+
+            ////Вычисление длины массива строк
+
+            //Console.WriteLine($"Длина массива: {greetings.Length}");
+
+
+            //Console.WriteLine();
+            //bool flag1 = true;
+
+            ////Изменение массива строк 
+
+            //Console.WriteLine("Введите индекс строки в массиве, которую вы хотите заменить (0, 1, 2):");
+
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //while (flag1)
+            //{
+
+            //    if (n < greetings.Length)
+            //    {
+            //        flag1 = false;
+            //    }
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Введите новую строку:");
+            //string str = Console.ReadLine();
+
+            //for (int counter1 = 0; counter1 < greetings.Length; counter1++)
+            //{
+            //    if (counter1 == n)
+            //    {
+            //        greetings[counter1] = str;
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("Измененный массив:");
+
+            //foreach (string m in greetings)
+            //{
+            //    Console.Write(m + " ");
+            //}
+
+
+
+
+
+            //Console.WriteLine();
+
+            ////Ступенчатый массив 2,3,4
+            //Console.WriteLine();
+            //Console.WriteLine("Ступенчатый массив:");
+            //int i = 0;
+            //// Объявляем ступенчатый массив
+            //int[][] myArr = new int[3][];
+            //myArr[0] = new int[2];
+            //myArr[1] = new int[3];
+            //myArr[2] = new int[4];
+
+
+            //// Инициализируем ступенчатый массив
+            //for (; i < 2; i++)
+            //{
+            //    myArr[0][i] = i;
+            //    Console.Write($"{myArr[0][i],2}");
+            //}
+
+            //Console.WriteLine();
+            //for (i = 0; i < 3; i++)
+            //{
+            //    myArr[1][i] = i;
+            //    Console.Write($"{myArr[1][i],2}");
+            //}
+
+            //Console.WriteLine();
+            //for (i = 0; i < 4; i++)
+            //{
+            //    myArr[2][i] = i;
+            //    Console.Write($"{myArr[2][i],2}");
+            //}
+            //Console.WriteLine();
+
+            ////Неявно типизированные переменные для хранения строки и массива
+            //Console.WriteLine();
+            //var varStr = "Good morning!";
+            //Console.WriteLine($"Неявно типизированная переменная для хранения данных типа String: {varStr}");
+            //Console.WriteLine();
+            //var varArr = new[] { 2, 3, 4 };
+            //Console.WriteLine("Неявно типизированная переменная для хранения массива: {0}, {1}, {2}", varArr[0], varArr[1], varArr[2]);
+            //Console.WriteLine();
+            ////<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+            ////Кортежи
+
+            ////<---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            Console.WriteLine();
+            Console.WriteLine("                            <--------Кортежи-------->");
+            Console.WriteLine();
+            (int, string, char, string, ulong) N = (20, "Press", 'F', "to pay respects", 123412345);
+            Console.WriteLine();
+            Console.WriteLine($"Вывод всех элементов кортежа: {N.Item1}, {N.Item2}, {N.Item3}, {N.Item4}, {N.Item5}");
+            Console.WriteLine();
+            Console.WriteLine($"Выборочный вывод элементов кортежа: {N.Item1},{N.Item3}, {N.Item4}");
+            (int, string, char, string, ulong) N1 = (20, "Press", 'F', " two times to pay respects", 123412345);
+            Console.WriteLine();
+            //Сравнение кортежей
+            if (N1 == N)
             {
-                for (int j = 0; j < 4; j++)
-                {
-                    MatrixArr[I, j] = Elem.Next(1, 10);
-                    Console.Write("{0}  ", MatrixArr[I, j]);
-                }
-                Console.WriteLine();
+                Console.WriteLine("Кортежи равны");
             }
+            else Console.WriteLine("Кортежи не равны");
+            //Использование автономной переменной
             Console.WriteLine();
+            var (_, pop1, pop2) = ("New York City", 1960, 2010);
+            Console.WriteLine($"Population change, 1960 to 2010: {pop2 - pop1}");
 
-            //Массив строк 
-
-            string[] greetings = new string[] { "How", "are", "you?" };
-
-            foreach (string m in greetings)
-            {
-                Console.Write(m + " ");
-            }
-
-            //Вычисление длины массива строк
-
-            Console.WriteLine($"Длина массива: {greetings.Length}");
-
-
-            Console.WriteLine();
-            bool flag1 = true;
-
-            //Изменение массива строк 
-
-            Console.WriteLine("Введите индекс строки в массиве, которую вы хотите заменить (0, 1, 2):");
-
-            int n = Convert.ToInt32(Console.ReadLine());
-
-            while (flag1)
-            {
-                
-                if (n < greetings.Length)
-                {
-                    flag1 = false;
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("Введите новую строку:");
-            string str = Console.ReadLine();
-
-            for (int counter1 = 0; counter1 < greetings.Length; counter1++)
-            {
-                if (counter1 == n)
-                {
-                    greetings[counter1] = str;
-                    break;
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("Измененный массив:");
-
-            foreach (string m in greetings)
-            {
-                Console.Write(m + " ");
-            }
-
-
-
-
-
-            Console.WriteLine();
-
-            //Ступенчатый массив 2,3,4
-            Console.WriteLine();
-            Console.WriteLine("Ступенчатый массив:");
-            int i = 0;
-            // Объявляем ступенчатый массив
-            int[][] myArr = new int[3][];
-            myArr[0] = new int[2];
-            myArr[1] = new int[3];
-            myArr[2] = new int[4];
-           
-
-            // Инициализируем ступенчатый массив
-            for (; i < 2; i++)
-            {
-                myArr[0][i] = i;
-                Console.Write($"{myArr[0][i],2}");
-            }
-
-            Console.WriteLine();
-            for (i = 0; i < 3; i++)
-            {
-                myArr[1][i] = i;
-                Console.Write($"{myArr[1][i],2}");
-            }
-
-            Console.WriteLine();
-            for (i = 0; i < 4; i++)
-            {
-                myArr[2][i] = i;
-                Console.Write($"{myArr[2][i],2}");
-            }
-            Console.WriteLine();
-
-            //Неявно типизированные переменные для хранения строки и массива
-            Console.WriteLine();
-            var varStr = "Good morning!";
-            Console.WriteLine($"Неявно типизированная переменная для хранения данных типа String: {varStr}");
-            Console.WriteLine();
-            var varArr = new[] { 2, 3, 4 };
-            Console.WriteLine("Неявно типизированная переменная для хранения массива: {0}, {1}, {2}", varArr[0], varArr[1], varArr[2]);
-            Console.WriteLine();
-
-
-
+            (var a, var b) = ("123", 456);
+            Console.WriteLine($"{a} {b}");
         }
 
+       public void fun2()
+        {
+            checked
+            {
+                int a1 = checked(2147483647);
+                a1++;
+               
+            }
+            
+        }
 
+        public void fun3()
+        {
+            unchecked
+            {
+                int a2 = unchecked(2147483647);
+                a2++;
+               
+            }
+            
+        }
+
+        //fun2();
+        //fun3();
 
 
     }
+
 }
